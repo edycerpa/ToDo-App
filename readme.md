@@ -33,7 +33,11 @@
 
 ## Capturas de Pantalla
 
-![To Do App](path/to/screenshot.png)
+### Modo Claro
+![To Do App - Modo Claro](/scrshot%20To-do%20list%20light.png)
+
+### Modo Oscuro
+![To Do App - Modo Oscuro](/scrshot%20To-do%20list%20dark.png)
 
 ## Contribuciones
 
@@ -49,4 +53,4 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
 
-
+[Eddy Cerpa](https://cerpawebdesigns.com/)
