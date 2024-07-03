@@ -1,0 +1,33 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "App sencilla de lista de tareas",
+  "author": "Eddy Cerpa",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^23.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.cerpawebdesigns.todoapp",
+    "productName": "To Do App",
+    "win": {
+      "target": "nsis",
+      "icon": "src/img/logo.ico"
+    },
+    "files": [
+      "src/**/*",
+      "todos.json",
+      "package.json"
+    ]
+  },
+  "keywords": [],
+  "license": "ISC",
+  "dependencies": {
+    "quill": "^2.0.2"
+  }
+}

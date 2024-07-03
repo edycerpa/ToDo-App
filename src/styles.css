@@ -1,0 +1,193 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+}
+
+:root {
+  --background-color: #f2f2f2;
+  --text-color: #333333;
+  --button-background-color: #09f;
+  --button-text-color: #f2f2f2;
+  --list-item-background-color: rgba(0, 0, 0, 0.1);
+  --green: #00c44c;
+  --yellow: #f7b742;
+  --red: #f75d59;
+  --dark-background-color: #191919;
+  --dark-text-color: #f2f2f2;
+  --dark-button-background-color: #ff5500;
+  --dark-button-text-color: #333333;
+  --dark-list-item-background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #f2f2f2;
+    --text-color: #333333;
+    --button-background-color: #09f;
+    --button-text-color: #f2f2f2;
+    --list-item-background-color: rgba(0, 0, 0, 0.1);
+  }
+} 
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+  --button-background-color: var(--dark-button-background-color);
+  --button-text-color: var(--dark-text-color);
+  --list-item-background-color: var(--dark-list-item-background-color);
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--list-item-background-color);
+  border-radius: 10px;
+}
+
+.titlebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  -webkit-app-region: drag;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0 10px;
+  z-index: 999;
+}
+
+.drag-region {
+  flex-grow: 1;
+  z-index: 999;
+}
+
+.logo {
+  height: 30px;
+  margin-top: 10px;
+}
+
+.window-controls {
+  -webkit-app-region: no-drag;
+  display: flex;
+  padding: 0;
+}
+
+.window-controls button {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 3px;
+  margin-left: 10px;
+  border-radius: 100vw;
+  aspect-ratio: 1;
+  width: 21px;
+  transition: opacity 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.window-controls button:nth-of-type(1){
+  background-color: var(--green);
+}
+.window-controls button:nth-of-type(2){
+  background-color: var(--yellow);
+}
+.window-controls button:nth-of-type(3){
+  background-color: var(--red);
+}
+.window-controls button:hover{
+  opacity: 0.7;
+}
+main{
+  padding: 20px;
+  margin-top: 50px;
+}
+#mode-toggle {
+  margin-bottom: 20px;
+}
+
+#editor-container {
+  margin-bottom: 20px;
+  height: 200px;
+  resize: vertical;
+  overflow: auto;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+button img :not(.window-controls button img) {
+  margin-right: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.todo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--list-item-background-color);
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.todo {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px; 
+}
+.buttons button{ 
+  color: var(--button-text-color);
+}
+.delete-btn {
+  background-color: var(--red);
+}
+.edit-btn {
+  background-color: var(--green);
+}
+
+body.dark-mode {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+  --button-background-color: var(--dark-button-background-color);
+  --button-text-color: var(--dark-text-color);
+  --list-item-background-color: var(--dark-list-item-background-color);
+}
